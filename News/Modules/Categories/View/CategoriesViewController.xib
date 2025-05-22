@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CategoriesViewController" customModule="News" customModuleProvider="target">
+            <connections>
+                <outlet property="businessButton" destination="SZd-bx-dbh" id="PhS-RO-gP2"/>
+                <outlet property="categorizedArticlesTable" destination="2jf-9Q-xGJ" id="LeO-KB-V8t"/>
+                <outlet property="healthButton" destination="lkN-AG-fbQ" id="qvw-8I-T3U"/>
+                <outlet property="noConnectionLabel" destination="2GQ-xM-PiJ" id="VBn-by-1SN"/>
+                <outlet property="scienceButton" destination="5Gf-Ff-fey" id="zFT-dZ-KLm"/>
+                <outlet property="screenHeader" destination="Dos-8q-qyg" id="jsd-2N-e6F"/>
+                <outlet property="sportsButton" destination="EmH-6e-ybt" id="JzZ-uu-9tq"/>
+                <outlet property="techButton" destination="QO0-OV-FTS" id="Fj7-na-FFU"/>
+                <outlet property="view" destination="iN0-l3-epB" id="6g7-U5-w9N"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AIO-Fh-9hc">
+                    <rect key="frame" x="0.0" y="59" width="393" height="793"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dos-8q-qyg" customClass="TabbarScreenHeader" customModule="News" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="8" width="393" height="40"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" placeholder="YES" id="owX-cc-Td3"/>
+                            </constraints>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2GQ-xM-PiJ">
+                            <rect key="frame" x="16" y="162" width="361" height="0.0"/>
+                            <fontDescription key="fontDescription" type="system" weight="thin" pointSize="14"/>
+                            <color key="textColor" systemColor="systemRedColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="UIA-40-9dt">
+                            <rect key="frame" x="8" y="64" width="377" height="90"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="06r-13-pXZ">
+                                    <rect key="frame" x="0.0" y="0.0" width="69" height="90"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QO0-OV-FTS">
+                                            <rect key="frame" x="0.0" y="0.0" width="69" height="64"/>
+                                            <color key="backgroundColor" systemColor="systemGray4Color"/>
+                                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" image="tech"/>
+                                            <connections>
+                                                <action selector="categorySelected:" destination="-1" eventType="touchUpInside" id="aKm-Aa-aXq"/>
+                                            </connections>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Tech." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9VA-f4-5Ob">
+                                            <rect key="frame" x="0.0" y="72" width="69" height="18"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="9fE-mN-qhD">
+                                    <rect key="frame" x="77" y="0.0" width="69" height="90"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lkN-AG-fbQ">
+                                            <rect key="frame" x="0.0" y="0.0" width="69" height="65"/>
+                                            <color key="backgroundColor" systemColor="systemGray4Color"/>
+                                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" image="health"/>
+                                            <connections>
+                                                <action selector="categorySelected:" destination="-1" eventType="touchUpInside" id="bHU-qK-sYD"/>
+                                            </connections>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Health" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MTM-V4-XFU">
+                                            <rect key="frame" x="0.0" y="73" width="69" height="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="U1d-xe-5Mk">
+                                    <rect key="frame" x="154" y="0.0" width="69" height="90"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EmH-6e-ybt">
+                                            <rect key="frame" x="0.0" y="0.0" width="69" height="65"/>
+                                            <color key="backgroundColor" systemColor="systemGray4Color"/>
+                                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" image="sports"/>
+                                            <connections>
+                                                <action selector="categorySelected:" destination="-1" eventType="touchUpInside" id="NfQ-rB-Xjq"/>
+                                            </connections>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Sports" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GRR-J1-RhG">
+                                            <rect key="frame" x="0.0" y="73" width="69" height="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="cmb-Bn-ckk">
+                                    <rect key="frame" x="231" y="0.0" width="69" height="90"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SZd-bx-dbh">
+                                            <rect key="frame" x="0.0" y="0.0" width="69" height="65"/>
+                                            <color key="backgroundColor" systemColor="systemGray4Color"/>
+                                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" image="business"/>
+                                            <connections>
+                                                <action selector="categorySelected:" destination="-1" eventType="touchUpInside" id="wDA-76-nOf"/>
+                                            </connections>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Business" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QJb-Tb-tjG">
+                                            <rect key="frame" x="0.0" y="73" width="69" height="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ntb-hx-zKZ">
+                                    <rect key="frame" x="308" y="0.0" width="69" height="90"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Gf-Ff-fey">
+                                            <rect key="frame" x="0.0" y="0.0" width="69" height="65"/>
+                                            <color key="backgroundColor" systemColor="systemGray4Color"/>
+                                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" image="science">
+                                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="categorySelected:" destination="-1" eventType="touchUpInside" id="xAM-b1-VHe"/>
+                                            </connections>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Science" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HLD-gT-jmt">
+                                            <rect key="frame" x="0.0" y="73" width="69" height="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="90" id="UP5-ZH-cCI"/>
+                            </constraints>
+                        </stackView>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="2jf-9Q-xGJ">
+                            <rect key="frame" x="0.0" y="162" width="393" height="631"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </tableView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="Dos-8q-qyg" firstAttribute="top" secondItem="AIO-Fh-9hc" secondAttribute="top" constant="8" id="2fH-1Y-vJJ"/>
+                        <constraint firstAttribute="trailing" secondItem="UIA-40-9dt" secondAttribute="trailing" constant="8" id="8O9-Wh-AxH"/>
+                        <constraint firstItem="Dos-8q-qyg" firstAttribute="leading" secondItem="AIO-Fh-9hc" secondAttribute="leading" id="BB4-ov-7Gk"/>
+                        <constraint firstAttribute="trailing" secondItem="2GQ-xM-PiJ" secondAttribute="trailing" constant="16" id="OiY-aj-mZM"/>
+                        <constraint firstAttribute="bottom" secondItem="2jf-9Q-xGJ" secondAttribute="bottom" id="Rbn-C8-F7a"/>
+                        <constraint firstItem="2GQ-xM-PiJ" firstAttribute="leading" secondItem="AIO-Fh-9hc" secondAttribute="leading" constant="16" id="YFx-Aq-BnH"/>
+                        <constraint firstItem="2GQ-xM-PiJ" firstAttribute="top" secondItem="UIA-40-9dt" secondAttribute="bottom" constant="8" id="Z1B-Ac-ZkB"/>
+                        <constraint firstItem="2jf-9Q-xGJ" firstAttribute="leading" secondItem="AIO-Fh-9hc" secondAttribute="leading" id="d6v-An-Lds"/>
+                        <constraint firstItem="UIA-40-9dt" firstAttribute="top" secondItem="Dos-8q-qyg" secondAttribute="bottom" constant="16" id="dxU-kz-nqW"/>
+                        <constraint firstAttribute="trailing" secondItem="2jf-9Q-xGJ" secondAttribute="trailing" id="jmU-37-ptO"/>
+                        <constraint firstAttribute="trailing" secondItem="Dos-8q-qyg" secondAttribute="trailing" id="s5d-xW-HyT"/>
+                        <constraint firstItem="2jf-9Q-xGJ" firstAttribute="top" secondItem="2GQ-xM-PiJ" secondAttribute="bottom" id="sUf-Ka-lh5"/>
+                        <constraint firstItem="UIA-40-9dt" firstAttribute="leading" secondItem="AIO-Fh-9hc" secondAttribute="leading" constant="8" id="xQk-xt-Rl0"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="AIO-Fh-9hc" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="D8Z-R5-Ai8"/>
+                <constraint firstItem="AIO-Fh-9hc" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="QN6-yy-I1J"/>
+                <constraint firstAttribute="bottom" secondItem="AIO-Fh-9hc" secondAttribute="bottom" id="bYZ-0z-tWv"/>
+                <constraint firstAttribute="trailing" secondItem="AIO-Fh-9hc" secondAttribute="trailing" id="dli-yP-ziM"/>
+            </constraints>
+            <point key="canvasLocation" x="46.564885496183201" y="19.718309859154932"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="business" width="45" height="45"/>
+        <image name="health" width="45" height="45"/>
+        <image name="science" width="45" height="45"/>
+        <image name="sports" width="45" height="45"/>
+        <image name="tech" width="45" height="45"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784310000001" green="0.81960784310000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

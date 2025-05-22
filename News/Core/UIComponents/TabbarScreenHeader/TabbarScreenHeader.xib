@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TabbarScreenHeader" customModule="News" customModuleProvider="target">
+            <connections>
+                <outlet property="animationToTextConstraint" destination="Oms-2S-3q4" id="gbA-4t-zf2"/>
+                <outlet property="lottieAnimationView" destination="O45-64-jF6" id="ytJ-Lo-q2N"/>
+                <outlet property="titleLabel" destination="41Z-Xp-vHv" id="Qog-se-JFs"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="50"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O45-64-jF6" customClass="LottieAnimationView" customModule="Lottie">
+                    <rect key="frame" x="8" y="0.0" width="50" height="50"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="Yco-aH-rp3"/>
+                        <constraint firstAttribute="width" secondItem="O45-64-jF6" secondAttribute="height" multiplier="1:1" id="ueP-Ro-xSd"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="home"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="41Z-Xp-vHv">
+                    <rect key="frame" x="57.999999999999993" y="9.3333333333333339" width="72.333333333333314" height="31.333333333333329"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tyZ-EK-ZUo">
+                    <rect key="frame" x="349" y="7.6666666666666679" width="36" height="34.666666666666657"/>
+                    <gestureRecognizers/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="36" id="Mom-Ds-Y4V"/>
+                        <constraint firstAttribute="width" secondItem="tyZ-EK-ZUo" secondAttribute="height" multiplier="1:1" id="dMI-JN-QQ1"/>
+                    </constraints>
+                    <imageReference key="image" image="magnifyingglass.circle.fill" catalog="system" renderingMode="hierarchical">
+                        <hierarchicalColors>
+                            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </hierarchicalColors>
+                    </imageReference>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="sOr-43-yQ4" appends="YES" id="msS-v0-f8S"/>
+                    </connections>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="tyZ-EK-ZUo" firstAttribute="centerY" secondItem="41Z-Xp-vHv" secondAttribute="centerY" id="4jf-Pc-cLk"/>
+                <constraint firstItem="O45-64-jF6" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="Acb-Ja-bgL"/>
+                <constraint firstItem="41Z-Xp-vHv" firstAttribute="leading" secondItem="O45-64-jF6" secondAttribute="trailing" id="Oms-2S-3q4"/>
+                <constraint firstItem="tyZ-EK-ZUo" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="41Z-Xp-vHv" secondAttribute="trailing" constant="16" id="QhP-QU-i10"/>
+                <constraint firstAttribute="bottom" secondItem="O45-64-jF6" secondAttribute="bottom" id="def-4U-b7o"/>
+                <constraint firstItem="O45-64-jF6" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="mFy-si-Gx7"/>
+                <constraint firstItem="41Z-Xp-vHv" firstAttribute="centerY" secondItem="O45-64-jF6" secondAttribute="centerY" id="mU9-vG-iBB"/>
+                <constraint firstAttribute="trailing" secondItem="tyZ-EK-ZUo" secondAttribute="trailing" constant="8" id="sFC-Pi-DJe"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="46.564885496183201" y="271.83098591549299"/>
+        </view>
+        <tapGestureRecognizer id="sOr-43-yQ4">
+            <connections>
+                <action selector="searchButtonClicked:" destination="-1" id="PqH-Ns-sTH"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+    <resources>
+        <image name="magnifyingglass.circle.fill" catalog="system" width="128" height="123"/>
+    </resources>
+</document>

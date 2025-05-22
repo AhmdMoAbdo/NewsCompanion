@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WebViewController" customModule="News" customModuleProvider="target">
+            <connections>
+                <outlet property="myWebView" destination="9Sp-q5-XSJ" id="vgO-jF-lhS"/>
+                <outlet property="view" destination="iN0-l3-epB" id="EdU-tv-5Mg"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back" translatesAutoresizingMaskIntoConstraints="NO" id="qJB-43-ckC">
+                    <rect key="frame" x="8" y="75" width="35" height="35"/>
+                    <gestureRecognizers/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="Q8g-yl-vbf"/>
+                        <constraint firstAttribute="width" secondItem="qJB-43-ckC" secondAttribute="height" multiplier="1:1" id="fqR-8h-0ih"/>
+                    </constraints>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="6G2-ex-Vg4" appends="YES" id="WFj-Fx-VQ6"/>
+                    </connections>
+                </imageView>
+                <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Sp-q5-XSJ">
+                    <rect key="frame" x="0.0" y="118" width="393" height="734"/>
+                    <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <wkWebViewConfiguration key="configuration">
+                        <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                        <wkPreferences key="preferences"/>
+                    </wkWebViewConfiguration>
+                </wkWebView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="9Sp-q5-XSJ" secondAttribute="bottom" id="AhB-ej-pzI"/>
+                <constraint firstItem="qJB-43-ckC" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="16" id="Hrf-1N-JCi"/>
+                <constraint firstItem="9Sp-q5-XSJ" firstAttribute="top" secondItem="qJB-43-ckC" secondAttribute="bottom" constant="8" id="JNF-LK-bIc"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="9Sp-q5-XSJ" secondAttribute="trailing" id="ero-7b-IOI"/>
+                <constraint firstItem="9Sp-q5-XSJ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="oTb-0J-hFt"/>
+                <constraint firstItem="qJB-43-ckC" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="sJA-7o-3Wp"/>
+            </constraints>
+            <point key="canvasLocation" x="48" y="20"/>
+        </view>
+        <tapGestureRecognizer id="6G2-ex-Vg4">
+            <connections>
+                <action selector="backButtonPressed:" destination="-1" id="76P-6x-Au8"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+    <resources>
+        <image name="back" width="200" height="200"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

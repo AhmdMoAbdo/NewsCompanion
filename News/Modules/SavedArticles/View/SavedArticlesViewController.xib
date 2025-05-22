@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SavedArticlesViewController" customModule="News" customModuleProvider="target">
+            <connections>
+                <outlet property="savedArticlesTable" destination="2wf-4e-Lay" id="1bd-fL-cX8"/>
+                <outlet property="screenHeader" destination="hqG-QL-Mk6" id="87k-73-KxW"/>
+                <outlet property="view" destination="iN0-l3-epB" id="d8X-DH-V1R"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b4V-Np-mwt">
+                    <rect key="frame" x="0.0" y="59" width="393" height="793"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hqG-QL-Mk6" customClass="TabbarScreenHeader" customModule="News" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="8" width="393" height="40"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" placeholder="YES" id="1ML-SS-cus"/>
+                            </constraints>
+                        </view>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="2wf-4e-Lay">
+                            <rect key="frame" x="0.0" y="48" width="393" height="745"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </tableView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="2wf-4e-Lay" firstAttribute="top" secondItem="hqG-QL-Mk6" secondAttribute="bottom" id="AgX-cr-wbf"/>
+                        <constraint firstItem="2wf-4e-Lay" firstAttribute="leading" secondItem="b4V-Np-mwt" secondAttribute="leading" id="RcA-zN-gBM"/>
+                        <constraint firstItem="hqG-QL-Mk6" firstAttribute="top" secondItem="b4V-Np-mwt" secondAttribute="top" constant="8" id="V3V-qL-JqS"/>
+                        <constraint firstAttribute="trailing" secondItem="2wf-4e-Lay" secondAttribute="trailing" id="ht6-f3-MYy"/>
+                        <constraint firstItem="hqG-QL-Mk6" firstAttribute="leading" secondItem="b4V-Np-mwt" secondAttribute="leading" id="vHN-Qi-Khr"/>
+                        <constraint firstAttribute="bottom" secondItem="2wf-4e-Lay" secondAttribute="bottom" id="wCy-WZ-CF3"/>
+                        <constraint firstAttribute="trailing" secondItem="hqG-QL-Mk6" secondAttribute="trailing" id="xds-3I-43b"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="b4V-Np-mwt" secondAttribute="bottom" id="HLc-nP-sn1"/>
+                <constraint firstItem="b4V-Np-mwt" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="MGq-jh-Gvm"/>
+                <constraint firstItem="b4V-Np-mwt" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="aQo-a9-qh0"/>
+                <constraint firstItem="b4V-Np-mwt" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="tM2-eY-YTN"/>
+            </constraints>
+            <point key="canvasLocation" x="46.564885496183201" y="19.718309859154932"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
